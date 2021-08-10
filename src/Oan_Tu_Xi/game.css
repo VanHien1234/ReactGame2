@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+*{
+	font-family: 'Audiowide', cursive;
+}
+
 .main{
     position: fixed;
     width: 100%;
@@ -55,4 +60,12 @@
 	border-left: 0;
 	margin-left: -17.5px;
 	margin-bottom: -35px;
+}
+.ketqua{
+	color: yellow;
+	font-size: 5rem;
+}
+.lanchoi,.lanthang{
+	color: rgb(0, 151, 45);
+	font-size: 3rem;
 }

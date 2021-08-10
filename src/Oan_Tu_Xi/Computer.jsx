@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-
-export default class Computer extends Component {
+import { connect } from 'react-redux';
+class Computer extends Component {
     render() {
+        let{computer}= this.props
         return (
             <div>
                 <div className="speech-bubble1">
                 <div className="mx-auto pt-3">
-                        <img style={{width:50, height:50}} src="./img/keo.png" alt="" />
+                        <img style={{width:50, height:50}} src={computer.img} alt="" />
                     </div>
                 </div>
                 <img style={{width:250,height:250}} src="./img/playerComputer.png" alt="" />
@@ -14,3 +15,10 @@ export default class Computer extends Component {
         )
     }
 }
+
+
+const mapStateToProps = state =>({
+    computer: state.GameReducer.computer,
+});
+
+export default  connect(mapStateToProps)(Computer)
